@@ -1,5 +1,5 @@
 [
-  {
+
     "id": 0,
     "type": "아파트",
     "picture": "images/apartment.jpg",
@@ -7,6 +7,7 @@
     "price": 1.23
   },
   {
+
     "id": 1,
     "type": "연립주택",
     "picture": "images/townhouse.jpg",
@@ -14,6 +15,7 @@
     "price": 1.56
   },
   {
+
     "id": 2,
     "type": "하우스",
     "picture": "images/house.jpg",
@@ -21,6 +23,7 @@
     "price": 2.74
   },
   {
+
     "id": 3,
     "type": "하우스",
     "picture": "images/house.jpg",
@@ -28,6 +31,7 @@
     "price": 1.87
   },
   {
+
     "id": 4,
     "type": "연립주택",
     "picture": "images/townhouse.jpg",
@@ -35,6 +39,7 @@
     "price": 1.97
   },
   {
+
     "id": 5,
     "type": "아파트",
     "picture": "images/apartment.jpg",
@@ -42,6 +47,7 @@
     "price": 1.77
   },
   {
+
     "id": 6,
     "type": "아파트",
     "picture": "images/apartment.jpg",
@@ -49,6 +55,7 @@
     "price": 2.12
   },
   {
+
     "id": 7,
     "type": "하우스",
     "picture": "images/house.jpg",

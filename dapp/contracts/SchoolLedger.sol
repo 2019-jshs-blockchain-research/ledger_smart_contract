@@ -21,13 +21,13 @@ contract SchoolLedger {
         owner = msg.sender;
     }
 
-    function lendSchoolLedger(uint _id, uint grade, uint class, bytes32 _name) public payable {
+    function lendSchoolLedger(uint _id, uint _grade, uint _class, bytes32 _name) public payable {
         require(_id >= 0 && _id <= 9);
         lenders[_id] = msg.sender;
-        lenderInfo[_id] = Lender(msg.sender, _grade, _class, _name);
+        lenderInfo[_id] = Lender(msg.sender, _name, _grade, _class);
 
         owner.transfer(msg.value);
-        emit LogBuySchoolLedger(msg.sender, _id);
+        emit LogLendSchoolLedger(msg.sender, _id);
     }
 
     function getLenderInfo(uint _id) public view returns (address, uint, uint, bytes32) {

@@ -27,38 +27,39 @@
       </div>
 
       <div id="events"></div>
-      
+
       <div class="row" id="list">
         <!-- 매물 리스트 -->
       </div>
-    </div>   
-    
+    </div>
+
     <div id="template" style="display: none;">
       <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="panel panel-success panel-realEstate">
+        <div class="panel panel-success panel-schoolLedger">
           <div class="panel-heading">
-            <h3 class="panel-title">매물</h3>
+            <h3 class="panel-title">학교내물품</h3>
           </div>
           <div class="panel-body">
             <img style="width: 100%;" src="" >
             <br/><br/>
-            <strong>아이디</strong>: <span class="id"></span><br/>
-            <strong>종류</strong>: <span class="type"></span><br/>
-            <strong>면적(m²)</strong>: <span class="area"></span><br/>
+            <strong>물품번호</strong>: <span class="id"></span><br/>
+            <strong>종류</strong>: <span class="name"></span><br/>
+            <strong>총개수</strong>: <span class="count"></span><br/>
+            <strong>위치</strong>: <span class="area"></span><br/>
             <strong>가격(ETH)</strong>: <span class="price"></span><br/><br/>
-            <button class="btn btn-info btn-buy" 
-                    type="button" 
-                    data-toggle="modal" 
+            <button class="btn btn-info btn-buy"
+                    type="button"
+                    data-toggle="modal"
                     data-target="#buyModal">
-                    매입
+                    대여
             </button>
-            <button class="btn btn-info btn-buyerInfo" 
-                    type="button" 
-                    data-toggle="modal" 
-                    data-target="#buyerInfoModal" 
+            <button class="btn btn-info btn-lenderInfo"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#lenderInfoModal"
                     style="display: none;">
-                    매입자 정보
-            </button>          
+                    대여자 정보
+            </button>
           </div>
         </div>
       </div>
@@ -69,13 +70,14 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">매입자 정보</h4>
+            <h4 class="modal-title">대여자 정보</h4>
           </div>
           <div class="modal-body">
             <input type="hidden" id="id" />
             <input type="hidden" id="price" />
             <input type="text" class="form-control" id="name" placeholder="이름" /><br/>
-            <input type="number" class="form-control" id="age" placeholder="나이" />
+            <input type="text" class="form-control" id="grade" placeholder="학년" />
+            <input type="text" class="form-control" id="class" placeholder="반" />
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -85,7 +87,7 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="buyerInfoModal">
+    <div class="modal fade" tabindex="-1" role="dialog" id="lenderInfoModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -93,9 +95,10 @@
             <h4 class="modal-title">매입자 정보</h4>
           </div>
           <div class="modal-body">
-            <strong>계정주소</strong>: <span id="buyerAddress"></span><br/>
-            <strong>이름</strong>: <span id="buyerName"></span><br/>
-            <strong>나이</strong>: <span id="buyerAge"></span><br/>
+            <strong>계정주소</strong>: <span id="lenderAddress"></span><br/>
+            <strong>이름</strong>: <span id="lenderName"></span><br/>
+            <strong>학년</strong>: <span id="lenderGrade"></span><br/>
+            <strong>반</strong>: <span id="lenderClass"></span><br/>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>

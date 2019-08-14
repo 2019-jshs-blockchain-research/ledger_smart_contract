@@ -1,5 +1,5 @@
-var RealEstate = artifacts.require("./RealEstate.sol");
+var SchoolLedger = artifacts.require("./SchoolLedger.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(RealEstate);
+  deployer.deploy(SchoolLedger);
 };

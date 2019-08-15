@@ -2,81 +2,81 @@
   {
     "id": 0,
     "name": "카메라",
-    "picture": "images/apartment.jpg",
+    "picture": "images/0.jpg",
     "area": "심화기가재실",
     "count": 1,
-    "price": 5.00
+    "price": 0.0005
   },
   {
     "id": 1,
     "name": "PH 측정기",
-    "picture": "images/house.jpg",
+    "picture": "images/1.jpg",
     "area": "화학실험실",
     "count": 11,
-    "price": 6.15
+    "price": 0.0005
   },
   {
     "id": 2,
     "name": "양면테이프",
-    "picture": "images/townhouse.jpg",
+    "picture": "images/2.jpg",
     "area": "화학실험실",
     "count": 3,
-    "price": 1.25
+    "price": 0.0005
   },
   {
     "id": 3,
     "name": "줄자",
-    "picture": "images/apartment.jpg",
+    "picture": "images/3.jpg",
     "area": "무한상상실",
     "count": 2,
-    "price": 2.57
+    "price": 0.0005
   },
   {
     "id": 4,
     "name": "가위",
-    "picture": "images/house.jpg",
+    "picture": "images/4.jpg",
     "area": "무한상상실",
     "count": 11,
-    "price": 1.10
+    "price": 0.0005
   },
   {
     "id": 5,
     "name": "약포지",
-    "picture": "images/townhouse.jpg",
+    "picture": "images/5.jpg",
     "area": "화학실험실",
     "count": 9,
-    "price": 0.15
+    "price": 0.0005
   },
   {
     "id": 6,
     "name": "보안경",
-    "picture": "images/house.jpg",
+    "picture": "images/6.jpg",
     "area": "화학실험실",
     "count": 10,
-    "price": 2.15
+    "price": 0.0005
   },
   {
     "id": 7,
     "name": "마스크",
-    "picture": "images/townhouse.jpg",
+    "picture": "images/7.jpg",
     "area": "화학실험실",
     "count": 7,
-    "price": 0.95
+    "price": 0.0005
   },
   {
     "id": 8,
     "name": "라텍스장갑",
-    "picture": "images/apartment.jpg",
+    "picture": "images/8.jpg",
     "area": "화학실험실",
     "count": 4,
-    "price": 0.65
+    "price": 0.0005
   },
   {
     "id": 9,
     "name": "비커",
-    "picture": "images/house.jpg",
+    "picture": "images/9.jpg",
     "area": "화학실험실",
     "count": 2,
-    "price": 3.15
-  },
+    "price": 0.0005
+  }
 ]

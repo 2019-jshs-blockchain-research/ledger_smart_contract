@@ -5,22 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>제주과학고 물품 대장 사이트-물품목록</title>
+    <title>제주과학고 물품 대장 사이트 - 물품 관리</title>
+
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="#" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap&subset=korean');
+  h1{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 50px;
+  }
+  h2 {
+  	background-color: #B2CCFF;
+  	margin: 0px 0px 0px;
+    padding: 30px;
+        }
+  strong, b, input, h4, span, h3, button{
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  b{
+    color:#003399;
+  }
+  </style>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script>
+		function addDay() {
+			var oDate; // 리턴할 날짜 객체 선언
+			// 기존날짜
+			var day = $("#s").val();
+			var yyyy = day.substring(0,4);
+			var mm = day.substring(5,7);
+			var dd = day.substring(8,10);
+			// 더할날짜
+			var pDay =  $("#p").val();
+			// 날짜 계산
+			dd = dd*1 + pDay*1;
+			mm-;-
+			oDate = new Date(yyyy, mm, dd);
+			// 새로운 날짜 표현
+			var year = oDate.getFullYear();
+			var month = (oDate.getMonth()+1);
+			month = month >= 10 ? month : '0' + month;
+			var day = oDate.getDate();
+			day = day >= 10 ? day : '0' + day;
+			$("#sp").val(year+"-"+month+"-"+day);
+		}
+
+  </script> -->
+  <h2></h2>
   </head>
+
   <body>
-    <div class="container">
+    <div class="container" >
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h1 class="text-center">물품목록사이트</h1>
+          <h1 class="text-center">물품 대여창</h1>
+          <h4> <center> <a href="javascript:history.back()">뒤로가기</a>로 뒤로가기 = 사용이 제한된 물품은 대여가 어렵습니다. </center></h4>
           <hr/>
           <br/>
         </div>
@@ -35,67 +85,77 @@
 
     <div id="template" style="display: none;">
       <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="panel panel-success panel-realEstate">
+        <div class="panel panel-success panel-schoolLedger">
           <div class="panel-heading">
-            <h3 class="panel-title">매물</h3>
+            <h3 class="panel-title">학교 내 물품</h3>
           </div>
           <div class="panel-body">
             <img style="width: 100%;" src="" >
             <br/><br/>
-            <strong>아이디</strong>: <span class="id"></span><br/>
-            <strong>종류</strong>: <span class="type"></span><br/>
-            <strong>면적(m²)</strong>: <span class="area"></span><br/>
-            <strong>가격(ETH)</strong>: <span class="price"></span><br/><br/>
-            <button class="btn btn-info btn-buy"
+            <strong>물품번호</strong>: <span class="id"></span><br/>
+            <strong>종류</strong>: <span class="name"></span><br/>
+            <strong>총개수</strong>: <span class="count"></span><br/>
+            <strong>위치</strong>: <span class="area"></span><br/>
+            <b>가격(ETH)</b>: <span class="price"></span><br/><br/>
+            <button class="btn btn-info btn-lend"
                     type="button"
                     data-toggle="modal"
-                    data-target="#buyModal">
-                    매입
+                    data-target="#lendModal">
+                    대여
             </button>
-            <button class="btn btn-info btn-buyerInfo"
+            <button class="btn btn-info btn-lenderInfo"
                     type="button"
                     data-toggle="modal"
-                    data-target="#buyerInfoModal"
+                    data-target="#lenderInfoModal"
                     style="display: none;">
-                    매입자 정보
+                    대여자 정보
             </button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="buyModal">
+    <div class="modal fade" tabindex="-1" role="dialog" id="lendModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">매입자 정보</h4>
+            <h4 class="modal-title">대여자 정보</h4>
           </div>
           <div class="modal-body">
             <input type="hidden" id="id" />
             <input type="hidden" id="price" />
-            <input type="text" class="form-control" id="name" placeholder="이름" /><br/>
-            <input type="number" class="form-control" id="age" placeholder="나이" />
+            <input type="text" class="form-control" id="name" placeholder="이름" />
+            <input type="text" class="form-control" id="grade" placeholder="학년" />
+            <input type="text" class="form-control" id="class" placeholder="반" />
+            <input type="text" class="form-control" id="date" placeholder="사용 기간(ex 오늘 포함 3일 -> 3" />
+            <input type="text" class="form-control" id="count" placeholder="개수" />
+            <!-- <input type="text" id="s"  style='width:100px' value='2019-08-15' />  ( ex : 2019-08-15 ) + <input type="text" id="p" style='width:50px' value="10"   />일 ( 더할날짜 1 ~ )
+            <input type="button" value="확인"  onclick="addDay();" />
+            <br/><br/><input type="text" id="sp" value="" />  -->
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-            <button type="button" class="btn btn-primary" onclick="App.buyRealEstate(); return false;">제출</button>
+            <button type="button" class="btn btn-primary" onclick="App.lendSchoolLedger(); return false;">제출</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="buyerInfoModal">
+    <div class="modal fade" tabindex="-1" role="dialog" id="lenderInfoModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">매입자 정보</h4>
+            <h4 class="modal-title">대여자 정보</h4>
           </div>
           <div class="modal-body">
-            <strong>계정주소</strong>: <span id="buyerAddress"></span><br/>
-            <strong>이름</strong>: <span id="buyerName"></span><br/>
-            <strong>나이</strong>: <span id="buyerAge"></span><br/>
+            <strong>계정주소</strong>: <span id="lenderAddress"></span><br/>
+            <strong>기간</strong>: <span id="lenderDate"></span><br/>
+            <strong>개수</strong>: <span id="lenderCount"></span><br/>
+            <strong>이름</strong>: <span id="lenderName"></span><br/>
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -113,4 +173,7 @@
     <script src="js/app.js"></script>
     <script src="js/utf8.js"></script>
   </body>
+  <footer>
+    <h2></h2>
+  </footer>
 </html>
